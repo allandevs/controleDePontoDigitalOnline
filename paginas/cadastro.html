@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Controle de Ponto</title>
+  </head>
+  <body>
+    
+    <div class="principal">
+
+      <section class="lateralEsquerda">
+          <div style="padding-top: 120px; text-align:center;">
+            <h1 class="display-1">Ponto Digital</h1>
+            <span class="display-4">Controle de ponto online</span>
+          </div>
+      </section>
+
+      <section class="mobile">
+        <div style="text-align:center;">
+          <h1 class="display-4">Ponto Digital</h1>
+          <span>Controle de ponto online</span>
+        </div>
+      </section>
+
+      <section class="acesso container">
+        <div style="text-align:center;">
+          <h1>Cadastrar Funcionário</h1>
+        </div>
+        
+        <form>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name"  placeholder="nome completo">
+          </div>
+          <div class="form-group">
+            <label for="CPF">Cpf</label>
+            <input type="number" class="form-control" id="CPF"  placeholder="cpf">
+          </div>
+          <div class="form-group">
+            <label for="inputState">Cargo</label>
+            <select id="inputState" class="form-control">
+              <option>selecione</option>
+              <option>Programador JR</option>
+              <option>Programador pleno</option>
+              <option>Programador Senior</option>
+              <option>Gerente de projetos</option>
+              <option>Analista de dados</option>
+              <option>Representante de vendas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="entrada">Horario de entrada</label>
+            <input type="text" class="form-control" id="entrada" placeholder="horário de entrada">
+          </div>
+          <div class="form-group">
+            <label for="saida">Horario de saída</label>
+            <input type="text" class="form-control" id="saida" placeholder="horário de saída">
+          </div>
+          <div class="mb-2">
+             <button type="button" class="btn btn-outline-success mr-2" disabled="disabled"  onclick="cadastrar()">Cadastrar</button>
+          <button type="button" class="btn btn-outline-dark" onclick="voltar()">Voltar</button>
+          </div>
+        </form>
+        
+      </section>
+     
+    </div>
+     <!-- modal -->
+     <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cadastro Realizado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span id="dados"></span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="voltar()">Sair</button>
+            <button type="button" class="btn btn-success" onclick="cadastro()">Novo cadastro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="../js/btn.js"></script>
+    <script src="../js/sistema.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

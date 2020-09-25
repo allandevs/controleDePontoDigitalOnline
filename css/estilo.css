@@ -1,0 +1,114 @@
+html, body {
+    margin:0px;
+    height:100%;
+    }
+.principal{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 43% 57%;
+    grid-template-rows: 100% !important;
+    
+}
+.lateralEsquerda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background:	#22bb33;
+    height: 100% !important;
+
+}
+
+@media(max-width:600px){
+   
+    .lateralEsquerda{
+        display: none;
+    }
+    .principal{
+        height: 100%;
+        display: block;
+       
+    }
+
+    .acesso{
+        padding-top:20px !important;
+        height:0px !important;
+    }
+    .mobile{
+        background:#22bb33;
+        padding: 40px;
+        border-radius: 0 0 25px 25px
+    }
+    .mobile div h1{
+        color:#fff;
+    }
+    .relogio-desktop{
+        display: none;
+    }
+    #nome-d{
+        display: none;
+    }
+}
+
+@media(min-width:600px){
+    .mobile{
+        display:none;
+    }
+   
+    
+}
+ .lateralEsquerda div h1{
+    color:#fff;
+}
+h1.acesso{
+
+    color:#000;
+}
+
+.acesso{
+    padding-top: 120px;
+    height: 100%;
+   
+}
+.btn{
+    width: 100%;
+    
+}
+
+.btn:enabled{
+    cursor: pointer;
+}
+a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #ccc;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.relogio{
+    color: #fff;
+    font-size: 40px;
+}
+.relogio-desktop{
+    color: #000;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#nome-d{
+font-size: 40px;
+text-align:center;
+}
+
+#nome{
+    font-size: 30px;
+    text-align:center;
+    color: #fff;
+
+    }
